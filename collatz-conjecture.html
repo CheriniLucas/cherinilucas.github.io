@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- SEO Meta Tags-->
+        <meta name="collatz-conjecture" content="pagina web personal" />
+        <meta name="Cherini Lucas" content="collatz conjecture" />
+        <title>Conjetura de Collatz</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLT4XK9L8B"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KLT4XK9L8B');
+        </script>
+    </head>
+
+
+    <body id="collatz-conjecture">
+
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Cherini Lucas</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#research">Investigación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#projects">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#solidworks">SolidWorks</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contacto</a></li>
+                    </ul>
+                    <div class="col-1 text-end">
+                        <a href="collatz-conjecture-en.html"><i class="bi-translate fs-4"></i> EN</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Masthead-->
+        <header class="collatz-conjecture">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Conjetura de Collatz!</h1>
+                        <hr class="divider" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Body-->
+        <section class="page-section">
+            <!-- Text-->
+            <div class="container col-lg-12 align-baseline">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <p class="text-muted">La conjetura de Collatz fue enunciada por el matemático Lothar Collatz en 1937, y a la fecha no se ha resuelto. El enuncia que sin importar el numero con el que arranquemos (perteneciente a los naturales), siempre alcanzara el 1, y por lo tanto un ciclo 4-2-1.</p>
+                        <p class="mb-5 text-muted">La función esta dada por:</p>
+
+                        <!-- box-->
+                        <div class="container col-lg-10 text-box mb-5">
+                            <p class="text-muted mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;n/2 , si n es par</p>
+                            <p class="text-muted mb-0">f(n) = | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siendo n un numero natural</p>
+                            <p class="text-muted mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 3n+1 , si n es impar</p>
+                        </div>
+
+                        <p class="text-muted">Los datos mas importantes a contemplar al ejecutar la función con un numero dado son el tiempo de orbita, que hace referencia al numero de iteraciones hasta alcanzar la unidad; y la cota superior, que es el mayor valor obtenido durante las iteraciones.</p>
+                        <p class="text-muted">Aunque no se ha demostrado la veracidad ni falsedad del resultado, en mayo de 2020 se comprobó la conjetura para todas las secuencias de números menores que 2^68.</p>
+                        <p class="text-muted">Por mi parte quería generar un pequeño archivo en C capaz de recibir cualquier numero, hacer las iteraciones y devolver el tiempo de orbita y el valor máximo alcanzado. Luego, buscando graficar los resultados y compararlos entre si, me pase a MatLab y modifiqué el código para que itere todos los números menores al ingresado por el usuario, grafique el tiempo de orbita y los valores máximos alcanzados; y que finalmente muestre el mayor de los valores máximos y el mayor tiempo de orbita obtenido con sus respectivos valores iniciales.</p>
+                        <p class="mb-5 text-muted">A continuación dejo 3 ejemplos realizados con n igual a 130, 1300 y 13000; y si les interesa descargar los código para pobrar con mas numeros, los mismos se encuentran disponibles en el siguiente <a href="https://github.com/CheriniLucas/collatz-conjecture" target="_blank"><i>link</i></a>.
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Images-->
+            <section class="container col-lg-12 align-baseline" id="image">
+                <div class="container-fluid p-0 row g-0">    
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="assets/img/research/collatz-conjecture/130.png" title="n = 130">
+                            <img class="img-fluid" src="assets/img/research/collatz-conjecture/130.png" alt="Collatz 130" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Conjetura de Collatz</div>
+                                <div class="project-name">n = 130</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="assets/img/research/collatz-conjecture/screen-130.png" title="n = 130">
+                            <img class="img-fluid" src="assets/img/research/collatz-conjecture/screen-130.png" alt="Collatz 130" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Conjetura de Collatz</div>
+                                <div class="project-name">n = 130</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="assets/img/research/collatz-conjecture/1300.png" title="n = 1300">
+                            <img class="img-fluid" src="assets/img/research/collatz-conjecture/1300.png" alt="Collatz 1300" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Conjetura de Collatz</div>
+                                <div class="project-name">n = 1300</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="assets/img/research/collatz-conjecture/screen-1300.png" title="n = 1300">
+                            <img class="img-fluid" src="assets/img/research/collatz-conjecture/screen-1300.png" alt="Collatz 1300" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Conjetura de Collatz</div>
+                                <div class="project-name">n = 1300</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="assets/img/research/collatz-conjecture/13000.png" title="n = 13000">
+                            <img class="img-fluid" src="assets/img/research/collatz-conjecture/13000.png" alt="Collatz 13000" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Conjetura de Collatz</div>
+                                <div class="project-name">n = 13000</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="assets/img/research/collatz-conjecture/screen-13000.png" title="n = 13000">
+                            <img class="img-fluid" src="assets/img/research/collatz-conjecture/screen-13000.png" alt="collatz 13000" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Conjetura de Collatz</div>
+                                <div class="project-name">n = 13000</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Home button-->
+            <div class="container col-lg-12 align-baseline">
+                <div class="row">
+                    <div class="col-xl-3 offset-xl-1 pt-5">
+                        <a class="btn btn-primary btn-xl" href="index.html">Inicio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer-->
+        <footer class="bg-light py-3">
+            <div class="container col-lg-12 px-0">
+                <div class="row gx-4 gx-lg-5 text-muted">
+                    <div class="col-lg-10 text-center pt-3 pe-0">
+                        <a>Copyright &copy; 2023 - Cherini Lucas</a>
+                    </div>
+                    <div class="col-lg-2 text-end mb-5 mb-lg-0">
+                        <a href="https://linkedin.com/in/cherinilucas" target="_blank"><i class="bi-linkedin fs-2 mb-3"></i></a>
+                        <a href="https://github.com/CheriniLucas" target="_blank"><i class="bi-github fs-2 mb-3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
