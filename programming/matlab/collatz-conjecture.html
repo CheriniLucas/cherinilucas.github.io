@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- SEO Meta Tags-->
+        <title>Collatz conjecture</title>
+        <meta name="author" content="Cherini Lucas" />
+        <meta name="description" content="We prove the Collatz conjecture on thousands of numbers with the help of C and MatLab." />
+        <meta name="keywords" content="portfolio, Matlab, C, investigación, Collatz"/>
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Collatz conjecture">
+        <meta property="og:description" content="We prove the Collatz conjecture on thousands of numbers with the help of C and MatLab.">
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+    </head>
+
+
+    <body id="collatz-conjecture">
+
+
+        <!-- Navigation-->
+        <div w3-include-html="/includes/navigation.html"></div>
+
+
+        <!-- Masthead-->
+        <header class="collatz-conjecture">
+            <div class="container px-4 px-lg-2 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Collatz conjecture!</h1>
+                        <hr class="divider" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Body-->
+        <section class="page-section">
+            <!-- Text-->
+            <div class="container col-lg-12 align-baseline">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <p class="text-muted">The Collatz conjecture was stated by the mathematician Lothar Collatz in 1937, and to date it has not been solved. He affirms that regardless of the number we start with (belonging to the natural ones), it will always reach 1, and therefore a 4-2-1 cycle.</p>
+                        <p class="mb-5 text-muted">The function is given by:</p>
+
+                        <!-- box-->
+                        <div class="container col-lg-6 text-box mb-5">
+                            <p class="text-muted mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;n/2 , if n is even</p>
+                            <p class="text-muted mb-0">f(n) = | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∀ &nbsp;n &nbsp;∈ &nbsp;ℕ</p>
+                            <p class="text-muted mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 3n+1 , if n is odd</p>
+                        </div>
+
+                        <p class="text-muted">The most important data to consider when executing the function with a given number is the orbit time, which refers to the number of iterations until reaching unity; and the upper bound, which is the highest value obtained during the iterations.</p>
+                        <p class="text-muted">Although the result has not been proven true or false, in May 2020 the conjecture was proven for all sequences of numbers less than 2^68.</p>
+                        <p class="text-muted">I wanted to develope a small C file capable of receiving any number, doing the iterations and returning the orbit time and the maximum value reached. So, in order to graph the results and compare them with each other, I modified the code with MatLab so that it iterates all the numbers less than the one entered by the user, it graphs the orbit time and the maximum values reached; and finally it shows the largest of the maximum values and the largest orbit time obtained with their respective initial values.</p>
+                        <p class="mb-5 text-muted">Below I leave 3 examples made with n equal to 130, 1300 and 13000; And if you are interested in downloading the codes to get poor with more numbers, they are available at the following <a href="https://github.com/cherinilucas/collatz-conjecture" target="_blank"><i>link</i></a>.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Images-->
+            <section class="container col-lg-12 align-baseline" id="image">
+                <div class="container-fluid p-0 row g-0">
+
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="/assets/programming/matlab/collatz-conjecture/130.png" title="n = 130">
+                            <img class="img-fluid" src="/assets/programming/matlab/collatz-conjecture/130.png" alt="Collatz 130" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Collatz conjecture</div>
+                                <div class="project-name">n = 130</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="/assets/programming/matlab/collatz-conjecture/screen-130.png" title="n = 130">
+                            <img class="img-fluid" src="/assets/programming/matlab/collatz-conjecture/screen-130.png" alt="Collatz 130" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Collatz conjecture</div>
+                                <div class="project-name">n = 130</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="/assets/programming/matlab/collatz-conjecture/1300.png" title="n = 1300">
+                            <img class="img-fluid" src="/assets/programming/matlab/collatz-conjecture/1300.png" alt="Collatz 1300" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Collatz conjecture</div>
+                                <div class="project-name">n = 1300</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="/assets/programming/matlab/collatz-conjecture/screen-1300.png" title="n = 1300">
+                            <img class="img-fluid" src="/assets/programming/matlab/collatz-conjecture/screen-1300.png" alt="Collatz 1300" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Collatz conjecture</div>
+                                <div class="project-name">n = 1300</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="/assets/programming/matlab/collatz-conjecture/13000.png" title="n = 13000">
+                            <img class="img-fluid" src="/assets/programming/matlab/collatz-conjecture/13000.png" alt="Collatz 13000" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Collatz conjecture</div>
+                                <div class="project-name">n = 13000</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="image-box" href="/assets/programming/matlab/collatz-conjecture/screen-13000.png" title="n = 13000">
+                            <img class="img-fluid" src="/assets/programming/matlab/collatz-conjecture/screen-13000.png" alt="collatz 13000" />
+                            <div class="image-box-caption">
+                                <div class="project-category text-white-50">Collatz conjecture</div>
+                                <div class="project-name">n = 13000</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+        </section>
+
+
+        <!-- Footer-->
+        <div w3-include-html="/includes/footer.html"></div>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/js/scripts.js"></script>
+        <!-- Includes function-->
+        <script> includeHTML();</script>
+    </body>
+</html>
